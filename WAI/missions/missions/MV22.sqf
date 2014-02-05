@@ -12,7 +12,7 @@ _box = createVehicle ["LocalBasicWeaponsBox",[(_position select 0) - 20,(_positi
 [_box] call Medical_Supply_Box;
 
 //Medical Tent
-_tent = createVehicle ["USMC_WarfareBFieldHospital",[(_position select 0) - 20,(_position select 1) - 20,0], [], 0, "CAN_COLLIDE"];
+_tent = createVehicle ["USMC_WarfareBFieldhHospital",[(_position select 0) - 20,(_position select 1) - 20,0], [], 0, "CAN_COLLIDE"];
 
 //MV22
 _veh = createVehicle [_vehclass,_position, [], 0, "CAN_COLLIDE"];
@@ -114,6 +114,7 @@ if (_playerPresent) then {
 	clean_running_mission = True;
 	deleteVehicle _veh;
 	deleteVehicle _box;
+	deleteVehicle _tent;
 	{_cleanunits = _x getVariable "missionclean";
 	if (!isNil "_cleanunits") then {
 		switch (_cleanunits) do {
